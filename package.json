@@ -1,0 +1,20 @@
+{
+  "name": "yuva-duty",
+  "version": "1.0.0",
+  "description": "YUVA DUTY - Empowering India's Youth to Build a Better Tomorrow",
+  "main": "server/server.js",
+  "scripts": {
+    "bootstrap": "npm install && npm run bootstrap:server && npm run bootstrap:client",
+    "bootstrap:server": "cd server && npm install",
+    "bootstrap:client": "cd client && npm install",
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "dev:server": "cd server && npm run dev",
+    "dev:client": "cd client && npm run dev",
+    "seed": "cd server && npm run seed"
+  },
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "author": "Yuva Duty Team",
+  "license": "ISC"
+}
