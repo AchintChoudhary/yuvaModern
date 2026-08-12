@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import logo from '../assets/logo.png';
 
 const Logo = ({ className = '', size = 'md' }) => {
   const getLogoSize = () => {
@@ -11,14 +12,14 @@ const Logo = ({ className = '', size = 'md' }) => {
       case 'xl':
         return 'w-32';
       default:
-        return 'w-14'; // md = 56px
+        return 'w-14';
     }
   };
 
   return (
     <Link to="/" className={`flex items-center select-none ${className}`}>
       <img
-        src="/src/assets/logo.png"
+        src={logo}
         alt="Yuva Duty"
         className={`${getLogoSize()} h-auto object-contain`}
       />
